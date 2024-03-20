@@ -3,24 +3,13 @@
 
 #include "Character/AuraEnemy.h"
 
-AAuraEnemy::AAuraEnemy()
+
+void AAuraEnemy::HighlightActor()
 {
-	PrimaryActorTick.bCanEverTick = true;
+	bIsHighLighted = true;
 }
 
-void AAuraEnemy::BeginPlay()
+void AAuraEnemy::UnHighlightActor()
 {
-	Super::BeginPlay();
-	
+	bIsHighLighted = false;
 }
-
-void AAuraEnemy::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
-
-void AAuraEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-}
-
